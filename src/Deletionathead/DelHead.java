@@ -3,7 +3,7 @@ package Deletionathead;
 public class DelHead {
     int size;
     Node head;
-    Node tail;
+
     public DelHead(){
         this.size=size;
     }
@@ -23,10 +23,11 @@ public class DelHead {
     }
     public static Node deleteHead(Node head){
         if(head == null){
-            return null;
+            return head;
         }
         Node temp = head;
-        head = head.next;
+        head = temp.next;
+        temp =null;
 
         return head;
 
